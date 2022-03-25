@@ -13,17 +13,18 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-$mhs = [
-    1=>['nama'=>'Budiono','jurusan'=>'Sistem Informasi'],
-    2=>['nama'=>'Susantiono','jurusan'=>'Sistem Informasi'],
-    3=>['nama'=>'Stevaniono','jurusan'=>'Informatika'],
-    4=>['nama'=>'giblberberb','jurusan'=>'Informatika'],
-];
+
 
 Route::get('/', function () {
     return view('welcome',['nama'=>'Renaldo','jurusan'=>'SI']);
 });
 
 Route::get('/Mahasiswa', function () {
-    return view('welcome',['nama'=>'Budiono','jurusan'=>'SI']);
+    $mhs = [
+        1=>['nama'=>'Budiono','jurusan'=>'Sistem Informasi'],
+        2=>['nama'=>'Susantiono','jurusan'=>'Sistem Informasi'],
+        3=>['nama'=>'Stevaniono','jurusan'=>'Informatika'],
+        4=>['nama'=>'gilbertono','jurusan'=>'CS'],
+    ];
+    return view('listMahasiswa')->with('mhs',$mhs);
 });
