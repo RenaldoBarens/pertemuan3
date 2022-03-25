@@ -17,6 +17,7 @@ $mhs = [
     1=>['nama'=>'Budiono','jurusan'=>'Sistem Informasi'],
     2=>['nama'=>'Susantiono','jurusan'=>'Sistem Informasi'],
     3=>['nama'=>'Stevaniono','jurusan'=>'Informatika'],
+    4=>['nama'=>'giblberberb','jurusan'=>'Informatika'],
 ];
 
 Route::get('/', function () {
